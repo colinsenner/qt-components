@@ -1,0 +1,10 @@
+{
+  "configurations": [
+    {
+      "name": "qt6",
+      "includePath": ["${workspaceFolder/**", "${QTDIR}include/**"],
+      "cppStandard": "c++17"
+    }
+  ],
+  "version": 4
+}
