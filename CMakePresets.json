@@ -2,12 +2,26 @@
   "version": 2,
   "configurePresets": [
     {
-      "name": "debug",
-      "generator": "Ninja",
-      "binaryDir": "${sourceDir}/build-debug",
+      "name": "debug-msvc",
+      "displayName": "Visual Studio Community 2022 Release - amd64",
+      "description": "Using compilers for Visual Studio 17 2022 (x64 architecture)",
+      "generator": "Visual Studio 17 2022",
+      "toolset": "host=x64",
+      "architecture": "x64",
+      "binaryDir": "${sourceDir}/build/${presetName}",
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug"
+        "CMAKE_INSTALL_PREFIX": "${sourceDir}/build/install/${presetName}",
+        "CMAKE_C_COMPILER": "cl.exe",
+        "CMAKE_CXX_COMPILER": "cl.exe"
       }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "debug-msvc-debug",
+      "displayName": "Visual Studio Community 2022 Release - amd64 - Debug",
+      "configurePreset": "debug-msvc",
+      "configuration": "Debug"
     }
   ]
 }
