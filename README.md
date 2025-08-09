@@ -5,15 +5,22 @@
 - Install Qt 6.9.1 from the [Qt website](https://www.qt.io/download)
 - Create `QTDIR` environment variable (e.g. `C:\Qt\6.9.1\msvc2022_64`)
 - Add `%QTDIR%\bin` to your `PATH` environment variable
+- Generate build files
+  - `mkdir build`
+  - `cd build`
+  - `cmake ..`
+- Build
+  - `cmake --build . --config Release -j4`
 
 ## Linux Setup
 
 - Install Qt 6.9.1 from the [Qt website](https://www.qt.io/download)
-- Generate cmake build
-  - mkdir build
-  - cd build
+- Generate build files
+  - `mkdir build`
+  - `cd build`
   - `cmake .. -DCMAKE_PREFIX_PATH=~/Qt/6.9.1/gcc_64`
-  - `cmake --build . --config Release -j 4`
+- Build
+  - `cmake --build . --config Release -j4`
 
 ### References
 
